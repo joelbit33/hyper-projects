@@ -20,7 +20,7 @@ def main():
             arithmetic_choice = input("")
 
             if arithmetic_choice == 'q':
-                break
+                active = False
             else:
                 answer = calculate_ab(number_a, number_b, arithmetic_choice)
                 latest_answers.append(answer)
@@ -29,4 +29,5 @@ def main():
 
 
 if __name__ == "__main__":
+    # confirms file is NOT a/part of a module and may continue execution
     main()
