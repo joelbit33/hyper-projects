@@ -12,7 +12,7 @@ def sum_admission(age_list):
                 total_sum += 18.00
             else:
                 total_sum += 23.00
-    return total_sum
+    return f'The total amount is ${total_sum}'
 
 
 age_list = []
@@ -22,9 +22,12 @@ while True:
     user_input = input(f"Input age of person.{user_count}: ")
     if user_input == "":
         break
-    else:
+    elif user_input.isnumeric():
         age_list.append(int(user_input))
         user_count += 1
+    else:
+        print("Not a valid age")
+        continue
 
 total_sum = sum_admission(age_list)
 print(total_sum)
